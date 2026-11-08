@@ -1,7 +1,7 @@
 // Offline support: app files are cached on install; fonts are cached the first time they load.
-const CACHE = 'dunk-v2';
+const CACHE = 'dunk-v3';
 const FILES = ['./', './index.html', './manifest.webmanifest',
-  './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+  './icon-192.png', './icon-512.png', './apple-touch-icon.png', './maskable-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
